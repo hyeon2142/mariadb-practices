@@ -9,8 +9,8 @@ public class BookDaoTest {
 
 	public static void main(String[] args) {
 
-		// insertTest();
-		// findallTest();
+		//insertTest();
+	    findallTest();
 		// deleteTest(1);           // 삭제할 BOOK NUMBER 넣어줘야함 
 		// updateTest(1,"테스트",20000,1);    // b_num, title, price, c_num
 

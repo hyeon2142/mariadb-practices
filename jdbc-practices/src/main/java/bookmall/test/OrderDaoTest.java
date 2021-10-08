@@ -10,7 +10,7 @@ public class OrderDaoTest {
 	public static void main(String[] args) {
 
 		// insertTest();
-		// findallTest();
+		 findallTest();
 		// deleteTest(1); // delete 사용 시 카테고리 번호를 넣어 줘야함
 		// updateTest(1,"테스트"); // update 사용 시 주문번호, 식별번호, 결제금액, 주소, 회원번호 적어줘야함
 

@@ -38,14 +38,12 @@ public class Order_BookDao {
 				int o_num = rs.getInt(1);
 				int b_num = rs.getInt(2);
 				int quantity = rs.getInt(3);
-				int price = rs.getInt(4);
 				
 
 				Order_BookVo vo = new Order_BookVo();
 				vo.setO_num(o_num);
 				vo.setB_num(b_num);
 				vo.setQuantity(quantity);
-				vo.setPrice(price);
 
 				result.add(vo);
 			}
@@ -84,14 +82,13 @@ public class Order_BookDao {
 			conn = getConnection();
 
 			// 3. SQL 준비
-			String sql = "insert into Order_Book values(?, ?, ?, ?)";
+			String sql = "insert into Order_Book values(?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 
 			// 4. 바인딩(파라미터 채우기)
 			pstmt.setInt(1, vo.getO_num());
 			pstmt.setInt(2, vo.getB_num());
 			pstmt.setInt(3, vo.getQuantity());
-			pstmt.setInt(4, vo.getPrice());
 
 			// 5. SQL 실행
 
@@ -122,7 +119,7 @@ public class Order_BookDao {
 	}
 
 	// update
-	public void update(int o_num, int b_num, int quantity, int price) {
+	public void update(int o_num, int b_num, int quantity) {
 		boolean result = false;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -132,14 +129,13 @@ public class Order_BookDao {
 			conn = getConnection();
 
 			// 3. SQL 준비
-			String sql = "update Order_Book set quantity = ?, price = ? where Order_o_num = ? and Book_b_num = ?";
+			String sql = "update Order_Book set quantity = ? where Order_o_num = ? and Book_b_num = ?";
 			pstmt = conn.prepareStatement(sql);
 
 			// 4. 바인딩(파라미터 채우기)
 			pstmt.setInt(1, quantity);
-			pstmt.setInt(2, price);
-			pstmt.setInt(3, o_num);
-			pstmt.setInt(4, b_num);
+			pstmt.setInt(2, o_num);
+			pstmt.setInt(3, b_num);
 			
 
 			// 5. SQL 실행

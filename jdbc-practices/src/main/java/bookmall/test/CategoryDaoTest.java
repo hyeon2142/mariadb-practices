@@ -9,7 +9,7 @@ public class CategoryDaoTest {
 
 	public static void main(String[] args) {
 		
-		//insertTest();
+		insertTest();
 		//findallTest();
 		//deleteTest(6);                // delete 사용 시 카테고리 번호를 넣어 줘야함
 		//updateTest(1,"테스트");			// update 사용 시 카테고리 번호와 바꿀 카테고리명을 넣어 줘야함
