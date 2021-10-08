@@ -45,7 +45,13 @@ public class Order_BookDaoTest {
 
 		vo = new Order_BookVo();
 		vo.setO_num(1);
-		vo.setB_num(5);
+		vo.setB_num(1);
+		vo.setQuantity(1);
+		dao.insert(vo);
+		
+		vo = new Order_BookVo();
+		vo.setO_num(1);
+		vo.setB_num(2);
 		vo.setQuantity(2);
 		dao.insert(vo);
 

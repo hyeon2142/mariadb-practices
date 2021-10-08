@@ -60,11 +60,6 @@ public class BookDaoTest {
 		vo.setC_num(3);
 		dao.insert(vo);
 
-		vo = new BookVo();
-		vo.setTitle("나무");
-		vo.setPrice(30000);
-		vo.setC_num(4);
-		dao.insert(vo);
 
 	}
 

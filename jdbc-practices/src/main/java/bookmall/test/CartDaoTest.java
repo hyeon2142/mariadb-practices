@@ -10,7 +10,7 @@ public class CartDaoTest {
 	public static void main(String[] args) {
 
 		// insertTest();
-		// findallTest();
+		 findallTest();
 		// deleteTest(1,1); // 삭제할 BOOK NUMBER 넣어줘야함
 		// updateTest(1,1,3); // 회원 번호, 책 번호, 수량
 
@@ -45,7 +45,13 @@ public class CartDaoTest {
 			vo = new CartVo();
 			vo.setM_num(1);
 			vo.setB_num(1);
-			vo.setQuantity(3);
+			vo.setQuantity(2);
+			dao.insert(vo);
+			
+			vo = new CartVo();
+			vo.setM_num(2);
+			vo.setB_num(3);
+			vo.setQuantity(2);
 			dao.insert(vo);
 
 			
